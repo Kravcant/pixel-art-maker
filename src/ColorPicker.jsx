@@ -20,8 +20,6 @@ export default function ColorPicker({ currentColor, setCurrentColor }) {
                 type="color" 
                 value={currentColor}>
             </input>
-
-            <div id="current-color" style={{ backgroundColor: currentColor }}></div>
             <div id="default-colors">
                 {buttonElements}
             </div>
