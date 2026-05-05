@@ -5,7 +5,7 @@ import ColorPicker from "./ColorPicker";
 export default function App() {
     const pads = Array.from({ length: 256 }, (_, i) => i);
 
-    const [currentColor, setCurrentColor] = useState("#F18D8B")
+    const [currentColor, setCurrentColor] = useState("#FF0000")
 
     const buttonElements = pads.map(pad => (
         <Pad key={pad} currentColor={currentColor} />

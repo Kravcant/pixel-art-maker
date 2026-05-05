@@ -31,3 +31,7 @@ button {
 
     color:p
 }
+
+#current-color {
+    height: 20px;
+}
