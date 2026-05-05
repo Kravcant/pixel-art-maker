@@ -5,7 +5,7 @@ export default function DefaultColors(props) {
         <button 
             style={{backgroundColor: props.color}}
             className={props.on ? "on" : undefined}
-            // onClick={() => props.toggle(props.id)}
+            onClick={props.onClick}
         ></button>
     )
 }

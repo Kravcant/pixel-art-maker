@@ -1,34 +1,34 @@
 export default [
     {
         id: 1,
-        color: "#F18D8B",
+        color: "#FF0000",
     },   
     {
         id: 2,
-        color: "#F5C280",
+        color: "#FFA500",
     },   
     {
         id: 3,
-        color: "#EEEC79",
+        color: "#FFFF00",
     },   
     {
         id: 4,
-        color: "#64ED98",
+        color: "#008000",
     },   
     {
         id: 5,
-        color: "#63DEED",
+        color: "#00FFFF",
     },   
     {
         id: 6,
-        color: "#877FED",
+        color: "#0000FF",
     },   
     {
         id: 7,
-        color: "#A57FE9",
+        color: "#800080",
     },   
     {
         id: 8,
-        color: "#F289C1",
+        color: "#FFC0CB",
     },   
 ]
