@@ -1,24 +1,20 @@
-import React from "react"
-// import padsData from "./pads"
+import React, { useState } from "react"
 import Pad from "./Pad"
+import ColorPicker from "./ColorPicker";
 
 export default function App() {
-    // const [pads, setPads] = React.useState(padsData)
-    
-    // function toggle(id) {
-    //     setPads(prevPads => prevPads.map(item => {
-    //         return item.id === id ? {...item, on: !item.on} : item
-    //     }))
-    // }
 
-    const pads = Array.from({ length: 400 }, (_, i) => i);
+    const pads = Array.from({ length: 256 }, (_, i) => i);
     
     const buttonElements = pads.map(pad => (
         <Pad key={pads[pad]}/>
     ))
+
+    let currentColor = useState("#F18D8B")
     
     return (
         <main>
+          <ColorPicker />
             <div className="pad-container">
                 {buttonElements}
             </div>

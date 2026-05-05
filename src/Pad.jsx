@@ -4,8 +4,7 @@ import React from "react"
 export default function Pad(props) {
     return (
         <button 
-            style={{backgroundColor: "white"}}
-            className={props.on ? "on" : undefined}
+            className="grid"
             // onClick={() => props.toggle(props.id)}
         ></button>
     )
