@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react"
 import Pad from "./Pad"
 import ColorPicker from "./ColorPicker";
