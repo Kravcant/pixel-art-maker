@@ -18,11 +18,15 @@ export default function ColorPicker({ currentColor, setCurrentColor }) {
 
             <input 
                 type="color" 
-                value={currentColor}>
+                value={currentColor}
+                onChange={(e) => setCurrentColor(e.target.value)}>
             </input>
+
             <div id="default-colors">
                 {buttonElements}
             </div>
+
+            <button type="button">Clear</button>
         </div>
     )
 }
