@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react"
 import colorsData from "./colors"
 import DefaultColors from "./DefaultColors"
@@ -13,7 +14,13 @@ export default function ColorPicker({ currentColor, setCurrentColor }) {
 
     return (
         <div id="color-picker">
-            <p>COLOR</p>
+            <h3>Pick a color:</h3>
+
+            <input 
+                type="color" 
+                value={currentColor}>
+            </input>
+
             <div id="current-color" style={{ backgroundColor: currentColor }}></div>
             <div id="default-colors">
                 {buttonElements}
