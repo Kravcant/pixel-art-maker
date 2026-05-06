@@ -3,7 +3,7 @@ import React from "react"
 import colorsData from "./colors"
 import DefaultColors from "./DefaultColors"
 
-export default function ColorPicker({ currentColor, setCurrentColor }) {
+export default function ColorPicker({ currentColor, setCurrentColor, onClear }) {
     const [colors, setColors] = React.useState(colorsData)
 
     const buttonElements = colors.map(color => (
@@ -26,7 +26,7 @@ export default function ColorPicker({ currentColor, setCurrentColor }) {
                 {buttonElements}
             </div>
 
-            <button type="button">Clear</button>
+            <button type="button" onClick={onClear}>Clear</button>
         </div>
     )
 }
