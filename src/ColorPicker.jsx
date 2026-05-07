@@ -8,7 +8,7 @@ export default function ColorPicker({ currentColor, setCurrentColor, onClear }) 
 
     const buttonElements = colors.map(color => (
         <DefaultColors
-            key={color.id} color={color.color} onClick={() => setCurrentColor(color.color)}
+            key={color.id} color={color} onClick={() => setCurrentColor(color.color)}
         />
     ))
 
