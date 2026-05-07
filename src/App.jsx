@@ -19,7 +19,7 @@ export default function App() {
             currentColor={currentColor}
             bgColor={padColors[pad]}
             setBgColor={(color) => setPadColors(prev => {
-                const updated = [...prev]
+                const updated = [prev]
                 updated[pad] = color
                 return updated
             })}
