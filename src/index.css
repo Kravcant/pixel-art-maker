@@ -29,3 +29,16 @@ button {
 .grid:hover {
     background-color: lightgray;
 }
+
+#color-picker {
+    border-radius: 20px;
+    padding: 10px 20px 20px 20px;
+    margin-right: 10px;
+    background-color: whitesmoke;
+}
+
+#clearbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

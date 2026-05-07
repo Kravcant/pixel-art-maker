@@ -22,11 +22,13 @@ export default function ColorPicker({ currentColor, setCurrentColor, onClear }) 
                 onChange={(e) => setCurrentColor(e.target.value)}>
             </input>
 
-            <div id="default-colors">
+            <div className="default-colors">
                 {buttonElements}
             </div>
 
-            <button type="button" onClick={onClear}>Clear</button>
+            <div id = "clearbtn">
+                <button type="button" onClick={onClear}>Clear</button>
+            </div>
         </div>
     )
 }
