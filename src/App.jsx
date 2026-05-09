@@ -39,7 +39,7 @@ export default function App() {
 
     return (
         <main>
-            <ColorPicker currentColor={currentColor} setCurrentColor={setCurrentColor} onClear={clearPads} />
+            <ColorPicker currentColor={currentColor} setCurrentColor={setCurrentColor} onClear={clearPads} padColors={padColors} />
             <div className="pad-container">
                 {buttonElements}
             </div>
