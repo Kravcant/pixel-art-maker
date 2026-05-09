@@ -54,7 +54,7 @@ export default function ColorPicker({ currentColor, setCurrentColor, onClear, pa
 
     return (
         <div id="color-picker">
-            <h3>Pixel Art Editor</h3>
+            <h1>Pixel Art Editor</h1>
 
             <input 
                 type="color" 
