@@ -14,7 +14,7 @@ export default function ColorPicker({ currentColor, setCurrentColor, onClear }) 
 
     return (
         <div id="color-picker">
-            <h3>Pick a color:</h3>
+            <h3>Pixel Art Editor</h3>
 
             <input 
                 type="color" 
@@ -26,9 +26,11 @@ export default function ColorPicker({ currentColor, setCurrentColor, onClear }) 
                 {buttonElements}
             </div>
 
-            <div id = "clearbtn">
-                <button type="button" onClick={onClear}>Clear</button>
+            <div id="clearbtn">
+                <button type="button" className="clear-button" onClick={onClear}>Clear</button>
             </div>
+
+            <p>Click any cell on the grid to paint it with the current color.</p>
         </div>
     )
 }
