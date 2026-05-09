@@ -30,7 +30,7 @@ export default function ColorPicker({ currentColor, setCurrentColor, onClear }) 
                 <button type="button" className="clear-button" onClick={onClear}>Clear</button>
             </div>
 
-            <p>Click any cell on the grid to paint it with the current color.</p>
+            <p>Click and drag on any cell on the grid to paint it with the current color.</p>
         </div>
     )
 }

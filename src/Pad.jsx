@@ -5,8 +5,9 @@ export default function Pad(props) {
     return (
         <button
             className="grid"
-            style={{ backgroundColor: props.bgColor }}
-            onClick={() => props.setBgColor(props.currentColor)}
+            style={{ backgroundColor: props.color }}
+            onMouseDown={props.onMouseDown}
+            onMouseEnter={props.onMouseEnter}
         ></button>
     )
 }

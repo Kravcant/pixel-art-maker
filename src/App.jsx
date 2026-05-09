@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Pad from "./Pad"
 import ColorPicker from "./ColorPicker";
 
@@ -8,21 +8,32 @@ export default function App() {
 
     const [currentColor, setCurrentColor] = useState("#000000")
     const [padColors, setPadColors] = useState(Array(256).fill(""))
+    const [isMouseDown, setIsMouseDown] = useState(false)
+
+    useEffect(() => {
+        const handleMouseUp = () => setIsMouseDown(false)
+        window.addEventListener("mouseup", handleMouseUp)
+        return () => window.removeEventListener("mouseup", handleMouseUp)
+    }, [])
 
     function clearPads() {
         setPadColors(Array(256).fill(""))
     }
 
+    function paintPad(index) {
+        setPadColors(prev => {
+            const updated = [...prev]
+            updated[index] = currentColor
+            return updated
+        })
+    }
+
     const buttonElements = pads.map(pad => (
         <Pad
             key={pad}
-            currentColor={currentColor}
-            bgColor={padColors[pad]}
-            setBgColor={(color) => setPadColors(prev => {
-                const updated = [...prev]
-                updated[pad] = color
-                return updated
-            })}
+            color={padColors[pad]}
+            onMouseDown={() => { setIsMouseDown(true); paintPad(pad) }}
+            onMouseEnter={() => { if (isMouseDown) paintPad(pad) }}
         />
     ))
 
